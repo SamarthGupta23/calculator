@@ -1,21 +1,17 @@
 const display = document.getElementById("display");
 
-
-function appendToDisplay(input){
+function appendToDisplay(input) {
     display.value += input;
-
 }
 
-function clear(){
+function clearDisplay() {
     display.value = "";
-
 }
 
-function calculate(){
-    try{
+function calculate() {
+    try {
         display.value = eval(display.value);
-    }
-    catch(error){
+    } catch (error) {
         display.value = "invalid input";
     }
 }
